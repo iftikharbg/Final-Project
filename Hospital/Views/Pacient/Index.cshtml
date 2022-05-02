@@ -1,0 +1,31 @@
+﻿@model PasientViewModel
+    <div id="home-root" class="d-flex align-items-center justify-content-center">
+        <div id="form-area" class="d-flex flex-column  align-items-center justify-content-center">
+            <h1>Pasient Elave Formu</h1>
+            <form class="input-form" asp-controller="Pacient" asp-action="AddPasient" asp-area-id="Admin" method="post">
+                @Html.ValidationSummary(true)
+                <input asp-for="Name" type="text" class="input" placeholder="Ad" />
+                <input asp-for="Surname" type="text" class="input" placeholder="Soyad" />
+                <input asp-for="BirthDate" type="date" class="input" placeholder="Dogum Tarixi" />
+                <input asp-for="PassportSerial" type="text" class="input" placeholder="Vesiqenin Seriya Nomresi" />
+                <input asp-for="Tin" type="text" class="input" placeholder="Fin Kod" />
+                <input asp-for="BloodGroup" type="text" class="input" placeholder="Qan Qrupu" />
+                <input asp-for="Address" type="text" class="input" placeholder="Unvan" />
+                <input asp-for="Telephone" type="text" class="input" placeholder="Tel" />
+                <select asp-for="Gender" class="input">
+                    <option value="Male">Kisi</option>
+                    <option value="Female">Qadin</option>
+
+                </select>
+                <button type="submit" class="button">Yadda Saxla</button>
+
+
+
+
+
+
+
+            </form>
+        </div>
+    </div>
+    @section Styles{ <link rel="stylesheet" href="~/css/Home.css" />}

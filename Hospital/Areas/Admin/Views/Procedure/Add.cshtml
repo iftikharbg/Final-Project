@@ -1,0 +1,18 @@
+﻿
+@model ProcedureAddViewModel
+
+<form class="d-flex flex-column" style="gap:10px;" enctype="multipart/form-data" asp-controller="Procedure" asp-action="Add" method="post">
+    <div>
+        <label>Name</label>
+        <input class="form-control" type="text" asp-for="Name" placeholder="Name" />
+    </div>
+    <div>
+        <label>Process Time(in minutes)</label>
+        <input class="form-control" type="number" asp-for="ProcessTime"  />
+    </div>
+   
+
+    <button type="submit" class="btn btn-primary">Elave Et</button>
+
+</form>
+

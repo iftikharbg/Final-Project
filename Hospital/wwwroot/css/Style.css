@@ -1,0 +1,68 @@
+﻿body{
+    overflow:hidden;
+}
+#app{
+    width:100vw;
+    height:100vh;
+    background-color:whitesmoke;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.pasient{
+    position:relative;
+    z-index:1;
+    height:40px;
+    background-color:rgba(255,255,255,0.2);
+    color:white !important;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 10px;
+    margin:5px 0;
+    width:100%;
+    font-size:1.5em;
+    transition:background-color 0.4s ease;
+
+}
+    .pasient:hover {
+        background-color: rgba(0,0,0,0.8);
+
+    }
+a{
+    text-decoration:none !important;
+}
+.input-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:300px;
+}
+.input{
+    height:40px;
+    background-color:rgba(255,255,255,0.3);
+    font-size:1.5em;
+    border:none;
+    border-radius:5px;
+    outline:none !important;
+    width:100%;
+    position:relative;
+    z-index:1;
+    color:white !important;
+}
+.input::placeholder{
+    color:white;
+}
+.button{
+    border:none;
+    outline:none !important;
+    border-radius:5px;
+    background-color:blue;
+    color:white;
+    padding:10px 0;
+    position:relative;
+    z-index:1;
+}
+

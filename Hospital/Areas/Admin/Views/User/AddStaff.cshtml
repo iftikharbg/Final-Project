@@ -1,0 +1,50 @@
+﻿
+@model UserCreateViewModel
+
+<form class="d-flex flex-column" style="gap:10px;" enctype="multipart/form-data" asp-controller="User" asp-action="AddStaff" method="post">
+    <div>
+        <label>Image</label>
+        <input class="form-control" type="file" asp-for="Image" />
+    </div>
+    <div>
+        <label>Name</label>
+        <input class="form-control" type="text" asp-for="Name" placeholder="Name" />
+    </div>
+    <div>
+        <label>Surname</label>
+        <input class="form-control" type="text" asp-for="Surname" placeholder="Surname" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input class="form-control" type="email" asp-for="Email" placeholder="Email" />
+    </div>
+    <div>
+        <label>BirthDate</label>
+        <input class="form-control" type="date" asp-for="BirthDate" placeholder="Birth Date" />
+    </div>
+    <div>
+        <label>Gender</label>
+        <select class="form-control" asp-for="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+
+        </select>
+    </div>
+    <div>
+        <label>JobStart</label>
+        <input class="form-control" type="date" asp-for="JobStart" />
+    </div>
+    <div>
+        <label>UserName</label>
+        <input class="form-control" type="text" asp-for="UserName" />
+    </div>
+    <div>
+        <label>Password</label>
+        <input class="form-control" type="password" asp-for="Password" />
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Elave Et</button>
+
+</form>

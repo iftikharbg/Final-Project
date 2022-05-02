@@ -1,0 +1,43 @@
+﻿@model UserUpdateViewModel
+
+<form asp-controller="User" asp-action="Update" method="post" enctype="multipart/form-data" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" placeholder="Name">
+
+    </div>
+    <div class="form-group">
+        <label for="Surname">Surname</label>
+        <input type="text" asp-for="Surname" class="form-control" id="Surname" placeholder="Surname">
+    </div>
+    <div class="form-group">
+        <label for="BirthDate">Birth Date</label>
+        <input type="date" asp-for="BirthDate" class="form-control" id="BirthDate" placeholder="BirthDate">
+    </div>
+    <div class="form-group">
+        <img src="~/img/@Model.ImagePath" style="width:100px; height:100px; object-fit:cover;" />
+        <label for="Image">Image</label>
+        <input type="file" asp-for="Image" class="form-control" id="Image" placeholder="Image">
+    </div>
+    <div class="form-group">
+        <select asp-for="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="JobStart">JobStart</label>
+        <input type="date" asp-for="JobStart" class="form-control" id="JobStart" placeholder="JobStart">
+    </div>
+    <div class="form-group">
+        <label for="JobEnd">Job End</label>
+        <input type="date" asp-for="JobEnd" class="form-control" id="JobEnd" placeholder="JobEnd">
+    </div>
+    <div class="form-group">
+        <label for="IsUserWorking">Is User Working</label>
+        @Html.CheckBoxFor(c => c.IsUserWorking);
+        
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

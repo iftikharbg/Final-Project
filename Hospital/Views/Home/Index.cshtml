@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles{ <link rel="stylesheet"href="~/css/Home.css" />}
+
+<div id="home-root" class="d-flex align-items-center justify-content-center">
+    <div id="form-area" class="d-flex flex-column  align-items-center justify-content-center">
+        @if (User.IsInRole("Admin"))
+        {
+            <h1>Admin</h1>
+            <a asp-controller="Dashboard" asp-area="Admin" asp-action="Index" class="pasient">Admin Panel</a>
+        }
+            else
+            {
+                <h1>Reception</h1>
+            }
+
+        <a asp-controller="Pacient" asp-action="Index" class="pasient">Pasient elave et</a>
+        <a asp-controller="Pacient" asp-action="List" class="pasient">Pasientlere baxmaq</a>
+
+
+
+        <a asp-controller="Account" asp-action="Logout" class="pasient">Cixish et</a>
+
+    </div>
+</div>

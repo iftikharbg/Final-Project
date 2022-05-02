@@ -1,0 +1,22 @@
+﻿@model DoctorCreateViewModel
+
+<form class="d-flex flex-column" style="gap:10px;" asp-action="Add" enctype="multipart/form-data" asp-controller="Doctor" method="post">
+    <div>
+        <label>Name</label>
+        <input class="form-control" type="text" asp-for="Name" placeholder="Name" />
+    </div>
+    <div>
+        <label>Surname</label>
+        <input class="form-control" type="text" asp-for="Surname" placeholder="Surname" />
+    </div>
+    <div>
+        <label>Birthdate</label>
+        <input class="form-control" type="date" asp-for="BirtDate" placeholder="Birthdate" />
+    </div>
+    <div>
+        <label>Photo</label>
+        <input class="form-control" type="file" asp-for="Photo" placeholder="Photo" />
+    </div>
+   
+    <button class="btn btn-primary" type="submit">Elave Et</button>
+</form>

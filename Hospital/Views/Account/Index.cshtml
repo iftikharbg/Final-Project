@@ -1,0 +1,28 @@
+﻿@model LoginViewModel
+
+<div id="login-box">
+    <div class="left">
+        <h1>Girish</h1>
+        @Html.ValidationSummary()
+        <form asp-controller="Account" asp-action="Login" method="post">
+            <input type="text" asp-for="Email" name="email" placeholder="Username" />
+            <span asp-validation-for="Email"></span>
+            <input type="password" asp-for="Password" name="password" placeholder="Password" />
+            <span asp-validation-for="Password"></span>
+
+
+            <input type="submit" name="signup_submit" value="Girish Et" />
+        </form>
+       
+    </div>
+
+    <div class="right">
+        <span class="loginwith">Xosh Gelmishsiniz!</span>
+
+       
+    </div>
+    
+</div>
+@section Styles{ 
+    <link href="~/css/Login.css" rel="stylesheet" />
+}

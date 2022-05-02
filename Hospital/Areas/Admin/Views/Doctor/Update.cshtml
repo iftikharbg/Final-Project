@@ -1,0 +1,24 @@
+﻿
+@model DoctorUpdateViewModel
+
+<form class="d-flex flex-column" style="gap:10px; align-items:start;" asp-route-id="@ViewBag.id" asp-action="Update" enctype="multipart/form-data" asp-controller="Doctor" method="post">
+    <div>
+        <label>Name</label>
+        <input class="form-control" type="text" asp-for="Name" placeholder="Name" />
+    </div>
+    <div>
+        <label>Surname</label>
+        <input class="form-control" type="text" asp-for="Surname" placeholder="Surname" />
+    </div>
+    <div>
+        <label>Birthdate</label>
+        <input class="form-control" type="date" asp-for="BirtDate" placeholder="Birthdate" />
+    </div>
+    <div>
+        <img style="width:100px;height:100px;object-fit:cover;" src="~/img/@Model.PhotoName"  alt="Doctor Image" />
+        <label>Photo</label>
+        <input class="form-control" type="file" asp-for="Photo" placeholder="Photo" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Deyish</button>
+</form>

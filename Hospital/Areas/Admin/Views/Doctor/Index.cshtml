@@ -1,0 +1,54 @@
+﻿@model List<Doctor>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>id</th>
+
+
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Birthdate</th>
+            <th>Photo</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @item.Id
+
+            </td>
+
+            <td>
+                @item.Name
+
+            </td>
+            <td>
+                @item.Surname
+
+            </td>
+            <td>
+                @Html.Raw(DateTime.Now.Year-item.BirtDate.Year)
+
+            </td>
+            <td>
+                @item.Photo
+
+            </td>
+            
+
+
+            <td>
+                <a asp-action="Update" asp-controller="Doctor" asp-route-id="@item.Id" class="btn btn-success">Update</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" asp-controller="Doctor" class="btn btn-danger">Delete</a>
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

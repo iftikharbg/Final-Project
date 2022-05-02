@@ -1,0 +1,40 @@
+﻿
+@model AddDoctorViewModel
+    <h1>@Model.procedure.Name</h1>
+<div class="d-flex">
+    @foreach (var item in Model.doctors)
+    {
+        
+    <div class="d-flex flex-column m-2">
+        <img style="width:150px;height:200px;object-fit:cover;" src="~/img/@item.Photo" alt="Image of Doctor" />
+        <h5>@item.Name @item.Surname</h5>
+
+
+        @if (Model.ProcedureDoctors.Contains(item))
+        {
+
+            <form method="post" asp-controller="Procedure" asp-action="DeleteDoctor">
+                <button type="submit" class="btn btn-danger">Sil</button>
+                <input type="hidden" value="@Model.Id" asp-for="AddDoctorProcedure.ProcedureId" />
+                <input type="hidden" value="@item.Id" asp-for="AddDoctorProcedure.DoctorId" />
+            </form>
+        }
+        else
+        {
+            <form method="post" asp-controller="Procedure" asp-action="AddDoctor">
+                <button type="submit" class="btn btn-success">Elave Et</button>
+                <input type="hidden" value="@Model.Id" asp-for="AddDoctorProcedure.ProcedureId" />
+                <input type="hidden" value="@item.Id" asp-for="AddDoctorProcedure.DoctorId" />
+            </form>
+        }
+
+
+
+
+    </div>
+        
+    }
+</div>
+
+
+
